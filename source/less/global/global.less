@@ -1,0 +1,63 @@
+/* stylelint-disable function-url-quotes */
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: no-wrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.background-wrapper {
+  background-color: @cobalt;
+  background-image: url(/source/img/pic/back-mobile.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.page__body {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: @cobalt;
+}
+
+.slider-toggle {
+  padding: 0;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 3px solid @light-grey;
+  background-color: @cobalt;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.slider-toggle--current {
+  padding: 0;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 3px solid @cobalt;
+  background-color: transparent;
+  cursor: pointer;
+}

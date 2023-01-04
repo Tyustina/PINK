@@ -1,0 +1,135 @@
+.adventages__slogan {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.adventages__item {
+  width: 280px;
+}
+
+.adventages__slogan--first_line {
+  margin-bottom: 25px;
+  /*delete*/
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
+}
+
+.adventages__slogan--second_line {
+  /*delete*/
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
+}
+
+.adventages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.adventages__img {
+  display: none;
+}
+
+.adventages__img--mobile {
+  width: 157px;
+  height: 320px;
+}
+
+.adventages__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.text-block {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.adventages__positive-effect {
+  display: none;
+  background-color: @clear-white;
+}
+
+.positive-effect__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+}
+
+.positive-effect__img {
+  width: 238px;
+  height: 276px;
+  margin-right: 72px;
+}
+
+.positive-effect__link {
+  color: @raspberry;
+}
+
+.adventages-list__wrapper {
+  background-color: @light-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .adventages-list__wrapper {
+    display: flex;
+  }
+
+  .adventages__list {
+    order: 2;
+    width: 310px;
+    margin-left: 42px;
+  }
+
+  .adventages__img--mobile {
+    width: 268px;
+    height: 547px;
+  }
+
+  .adventages__positive-effect {
+    display: flex;
+  }
+
+  .adventages__slogan--first_line {
+    margin-bottom: 0;
+  }
+
+  .adventages__slogan {
+    font-size: 40px;
+    line-height: 54px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .adventages__list {
+    display: flex;
+    width: 940px;
+    justify-content: space-between;
+  }
+
+  .positive-effect__text-wrapper {
+    width: 534px;
+  }
+
+  .adventages__positive-effect {
+    background-color: @light-grey;
+  }
+
+  .adventages__img--mobile {
+    display: none;
+  }
+
+  .adventages__img {
+    display: block;
+    width: 186px;
+    height: 382px;
+  }
+
+  .adventages__slogan {
+    font-size: 50px;
+    line-height: 68px;
+  }
+}
