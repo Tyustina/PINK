@@ -1,20 +1,22 @@
 .download-app {
-  // background-image: url("/source/img/pic/main_img.png");
-  // background-size: 320px 286px;
-  // background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
+  background-color: @cobalt;
+  background-image: url("../img/content/back-mobile.png");
+  background-position: 50% 0;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  margin-top: -90px;
 }
 
-.download-app__slogan {
+.download-app__title {
   /*delete*/
   outline: 5px solid rgba(0, 255, 255, 0.3);
   outline-offset: -5px;
-  color: @clear-white;
+  color: @white;
   font-weight: 300;
   font-size: 24px;
   line-height: 29px;
-  margin-bottom: 320px;
+  padding-top: 97px;
+  margin-bottom: 318px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -31,24 +33,25 @@
 }
 
 .download-app__wrapper {
-  background-color: @cobalt;
-  padding: 29px 20px 38px 20px;
-  /*delete*/
-  outline: 5px solid rgba(255, 0, 0, 0.7);
-  outline-offset: -5px;
+  min-height: min-content;
+  background-color: @dark-blue;
+  margin: 0;
+  padding: 0;
 }
 
 .download-app__button {
-  background-color: transparent;
-  border: 3px solid @clear-white;
-  border-radius: 29px;
-  padding: 21px 38px;
+  display: block;
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
-  color: @clear-white;
-  margin: 0 auto 32px auto;
+  color: @white;
+  margin: 20px auto 32px auto;
+  background-color: transparent;
+  border: 3px solid @white;
+  border-radius: 30px;
+  // padding: 21px 38px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 46px;
@@ -57,11 +60,20 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 67px;
   }
+
+  &:hover {
+    background-color: @white;
+    color: @pink;
+  }
+
+  &:active .download-app__button_text {
+    opacity: 0.3;
+  }
 }
 
 .download-app__operation-sisnem {
   display: flex;
-  width: 210px;
+  width: 205px;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto 28px auto;
@@ -77,12 +89,18 @@
   }
 }
 
+.download-app__operation-sisnem li {
+  display: block;
+  cursor: pointer;
+}
+
 .download-app__text {
-  color: @clear-white;
+  color: @white;
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
   text-align: center;
 

@@ -1,22 +1,97 @@
+.price {
+  background-color: @light-grey;
+  padding-bottom: 70px;
+  padding-top: 55px;
+}
+
 .price-table {
   border-collapse: collapse;
 }
 
 .price-table__first-line {
   font-size: 16px;
+  font-weight: 700;
   text-transform: uppercase;
   background: @cobalt;
-  color: @clear-white;
+  color: @white;
 }
 
 .price-table__cost {
   font-weight: 300;
   font-size: 18px;
-  color: @clear-white;
+  color: @white;
 }
 
 .price-table__left-column {
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
+  background-color: @white;
+}
+
+.price-table__yes-or-no {
+  background-color: @white;
+}
+
+.price__img-no {
+  width: 27px;
+  height: 27px;
+}
+
+.price__img-yes {
+  width: 31px;
+  height: 21px;
+}
+
+@media (min-width: @tablet-width) {
+  .price-table__left-column {
+    width: 153px;
+    height: 45px;
+    border: 2px solid @dirty-white;
+    padding-left: 17px;
+  }
+
+  .price-table__first-line {
+    width: 152px;
+    height: 75px;
+    border: 2px solid @dirty-white;
+    text-align: center;
+  }
+
+  .price-table__yes-or-no {
+    width: 152px;
+    height: 45px;
+    border: 2px solid @dirty-white;
+    text-align: center;
+  }
+
+  .slider-toggles {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price-table__left-column {
+    width: 234px;
+    height: 59px;
+    padding-left: 22px;
+    font-size: 18px;
+  }
+
+  .price-table__cost {
+    font-size: 24px;
+  }
+
+  .price-table__first-line {
+    width: 233px;
+    height: 94px;
+    font-size: 18px;
+  }
+
+  .price-table__yes-or-no {
+    width: 233px;
+    height: 59px;
+    border: 2px solid @dirty-white;
+    text-align: center;
+  }
 }

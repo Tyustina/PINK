@@ -1,9 +1,17 @@
-.reviews__block {
-  display: flex;
+.reviews {
   width: 280px;
+  margin-bottom: 57px;
 }
 
-.reviews__author {
+.review__block {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.review__author {
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
@@ -23,53 +31,111 @@
   display: none;
 }
 
-.rewiews__previous {
+.review__previous,
+.review__next {
   display: none;
 }
 
-.rewiews__next {
-  display: none;
-}
-
-.reviews__text {
+.review__text {
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
+  margin: 0;
+  margin-bottom: 41px;
+}
+
+.slider-toggles {
+  display: flex;
+  width: 60px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
-  .reviews__block {
-    width: 620px;
+  .reviews {
+    width: 660px;
   }
 
   .author__data {
     display: block;
+    order: 3;
+    margin-top: 0;
+    margin-bottom: 45px;
   }
 
-  .reviews__text {
+  .review__text {
     font-size: 18px;
+    margin-bottom: 51px;
   }
 
-  .reviews__author {
+  .review__author {
     font-size: 20px;
-    margin-bottom: 17px;
+    flex-direction: column-reverse;
+    order: 2;
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .reviews__block {
-    width: 688px;
+  .reviews__img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .reviews {
+    width: 940px;
+    /*delete*/
+    outline: 5px solid rgba(0, 255, 0, 0.7);
+    outline-offset: -5px;
+  }
+
+  .review__wrapper {
+    width: 100%;
+    /*delete*/
+    outline: 5px solid rgba(0, 255, 0, 0.7);
+    outline-offset: -5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .review__previous,
+  .review__next {
+    display: block;
+    width: 41px;
+    height: 41px;
+    cursor: pointer;
+  }
+
+  .review__block {
+    align-items: center;
+    width: 940px;
+    /*delete*/
+    outline: 5px solid rgba(0, 255, 255, 0.3);
+    outline-offset: -5px;
   }
 
   .slider-toggles {
     display: none;
   }
 
-  .reviews__author {
+  .review__text {
+    width: 688px;
+    margin-bottom: 0;
+    /*delete*/
+    outline: 5px solid rgba(255, 0, 0, 0.7);
+    outline-offset: -5px;
+  }
+
+  .review__author {
     font-size: 24px;
   }
 
   .author__data {
     font-size: 18px;
+    margin-bottom: 200px;
   }
 }

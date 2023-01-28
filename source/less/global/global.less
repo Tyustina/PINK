@@ -1,6 +1,8 @@
 /* stylelint-disable function-url-quotes */
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -25,13 +27,6 @@ a {
   overflow: hidden;
 }
 
-.background-wrapper {
-  background-color: @cobalt;
-  background-image: url(/source/img/pic/back-mobile.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
 .page__body {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
@@ -39,14 +34,31 @@ a {
   font-size: 18px;
   line-height: 30px;
   color: @cobalt;
+  min-height: 100%;
+  margin: 0;
+  background-color: @white;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 280px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    max-width: 940px;
+  }
 }
 
 .slider-toggle {
   padding: 0;
-  width: 11px;
-  height: 11px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  border: 3px solid @light-grey;
   background-color: @cobalt;
   opacity: 0.3;
   cursor: pointer;
@@ -54,8 +66,8 @@ a {
 
 .slider-toggle--current {
   padding: 0;
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   border: 3px solid @cobalt;
   background-color: transparent;
