@@ -92,12 +92,8 @@ a {
 }
 .header {
   background-color: rgba(0, 0, 0, 0.3);
-  /*delete*/
-  outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px;
 }
 .page-header {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -191,18 +187,51 @@ a {
   font-size: 18px;
   line-height: 32px;
 }
+@media (min-width: 660px) {
+  .main-nav__items {
+    display: none;
+  }
+  .logo--mobile {
+    display: none;
+  }
+  .logo--tablet {
+    display: block;
+    width: 145px;
+    height: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .logo--tablet {
+    display: none;
+  }
+  .logo--desktop {
+    display: block;
+    width: 147px;
+  }
+  .main-nav__toggle {
+    display: none;
+  }
+  .main-nav__items {
+    display: flex;
+    width: 615px;
+    justify-content: space-between;
+  }
+}
 .download-app {
   background-color: #283645;
   background-image: url("../img/content/back-mobile.png");
-  background-position: 50% 0;
+  background-position: 0 0;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  margin-top: -95px;
+  margin-top: -90px;
+}
+@media (min-width: 660px) {
+  .download-app {
+    padding-left: 20px;
+    margin-top: -100px;
+  }
 }
 .download-app__title {
-  /*delete*/
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
   color: #FFFFFF;
   font-weight: 300;
   font-size: 24px;
@@ -214,8 +243,11 @@ a {
 @media (min-width: 660px) {
   .download-app__title {
     font-size: 40px;
+    min-width: 300px;
+    max-width: 40%;
     line-height: 48px;
     margin-bottom: 39px;
+    align-items: flex-start;
   }
 }
 @media (min-width: 1200px) {
@@ -226,12 +258,11 @@ a {
   }
 }
 .download-app__wrapper {
-  min-height: -webkit-min-content;
   min-height: -moz-min-content;
   min-height: min-content;
   background-color: #1D2631;
   margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 .download-app__button {
   display: block;
@@ -239,11 +270,13 @@ a {
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
+  text-align: center;
   color: #FFFFFF;
-  margin: 20px auto 32px auto;
+  margin: 8px auto 32px auto;
   background-color: transparent;
   border: 3px solid #FFFFFF;
   border-radius: 30px;
+  padding: 21px 38px;
   cursor: pointer;
 }
 @media (min-width: 660px) {
@@ -307,7 +340,8 @@ a {
   }
   .download-app__wrapper {
     background-color: transparent;
-    width: 300px;
+    min-width: 300px;
+    max-width: 40%;
     padding: 0;
   }
   .download-app__slogan {
@@ -335,11 +369,9 @@ a {
 .adventages__list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
   width: 320px;
-  margin-top: 53px;
-  margin-bottom: 325px;
+  margin: 53px auto 325px auto;
 }
 .adventages__item {
   margin-bottom: 43px;

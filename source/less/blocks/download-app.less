@@ -1,16 +1,18 @@
 .download-app {
   background-color: @cobalt;
   background-image: url("../img/content/back-mobile.png");
-  background-position: 50% 0;
+  background-position: 0 0;
   background-size: 100% auto;
   background-repeat: no-repeat;
   margin-top: -90px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 20px;
+    margin-top: -100px;
+  }
 }
 
 .download-app__title {
-  /*delete*/
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
   color: @white;
   font-weight: 300;
   font-size: 24px;
@@ -21,8 +23,11 @@
 
   @media (min-width: @tablet-width) {
     font-size: 40px;
+    min-width: 300px;
+    max-width: 40%;
     line-height: 48px;
     margin-bottom: 39px;
+    align-items: flex-start;
   }
 
   @media (min-width: @desktop-width) {
@@ -36,7 +41,7 @@
   min-height: min-content;
   background-color: @dark-blue;
   margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 
 .download-app__button {
@@ -45,12 +50,13 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
+  text-align: center;
   color: @white;
-  margin: 20px auto 32px auto;
+  margin: 8px auto 32px auto;
   background-color: transparent;
   border: 3px solid @white;
   border-radius: 30px;
-  // padding: 21px 38px;
+  padding: 21px 38px;
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
@@ -116,7 +122,8 @@
 
   .download-app__wrapper {
     background-color: transparent;
-    width: 300px;
+    min-width: 300px;
+    max-width: 40%;
     padding: 0;
   }
 
