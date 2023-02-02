@@ -188,9 +188,6 @@ a {
   line-height: 32px;
 }
 @media (min-width: 660px) {
-  .main-nav__items {
-    display: none;
-  }
   .logo--mobile {
     display: none;
   }
@@ -228,7 +225,8 @@ a {
 @media (min-width: 660px) {
   .download-app {
     padding-left: 20px;
-    margin-top: -100px;
+    margin-top: -110px;
+    padding-top: 102px;
   }
 }
 .download-app__title {
@@ -353,6 +351,14 @@ a {
     height: 743px;
   }
 }
+.adventages {
+  position: relative;
+}
+@media (min-width: 660px) {
+  .adventages {
+    margin-bottom: 50px;
+  }
+}
 .adventages__titles {
   font-weight: 300;
   font-size: 24px;
@@ -363,6 +369,14 @@ a {
   margin-bottom: 70px;
   text-align: center;
 }
+@media (min-width: 660px) {
+  .adventages__titles {
+    font-size: 40px;
+    line-height: 54px;
+    margin-top: 57px;
+    margin-bottom: 122px;
+  }
+}
 .title__first-line {
   margin-bottom: 25px;
 }
@@ -371,10 +385,49 @@ a {
   flex-direction: column;
   text-align: center;
   width: 320px;
-  margin: 53px auto 325px auto;
+  margin-top: 53px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 367px;
+  background-color: #F2F2F2;
+}
+.adventages__list::after {
+  position: absolute;
+  content: "";
+  top: 650px;
+  left: 170px;
+  width: 157px;
+  height: 270px;
+  background-image: url("../img/content/adv-mobile.png");
+  background-repeat: no-repeat;
+}
+@media (min-width: 660px) {
+  .adventages__list::after {
+    position: absolute;
+    width: 268px;
+    height: 485px;
+    top: 270px;
+    left: 20px;
+    background-image: url("../img/content/adv-tablet.png");
+  }
+}
+@media (min-width: 660px) {
+  .adventages__list {
+    width: 50%;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+    text-align: left;
+  }
 }
 .adventages__item {
   margin-bottom: 43px;
+}
+@media (min-width: 660px) {
+  .adventages__item {
+    margin-bottom: 46px;
+  }
 }
 .adventages__item:last-child {
   margin-bottom: 0;
@@ -384,28 +437,48 @@ a {
   font-size: 18px;
   line-height: 24px;
   margin: 0;
+  padding: 0;
   margin-bottom: 24px;
 }
 .adventages__text-block {
   font-size: 14px;
   line-height: 24px;
   margin: 0;
+  padding: 0;
 }
-.adventages__effect {
+.positive__effect {
+  position: relative;
   display: none;
+  /*delete*/
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
 }
-.adventages__effect-title {
+@media (min-width: 660px) {
+  .positive__effect {
+    display: block;
+    margin-bottom: 102px;
+  }
+}
+.positive__effect-title {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
 }
-.adventages__effect-link {
+.pozitive__text-block {
   font-size: 14px;
   line-height: 24px;
-  color: #D22856;
+  margin: 0;
+  padding: 0;
+}
+.pozitive__effect-link {
+  font-size: 14px;
+  line-height: 24px;
 }
 .reviews {
-  width: 280px;
+  min-width: 280px;
+  max-width: 400px;
+  background-color: #FFFFFF;
+  margin: auto;
   margin-bottom: 57px;
 }
 .review__block {
@@ -419,6 +492,7 @@ a {
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
+  margin-top: 50px;
   margin-bottom: 31px;
   font-style: normal;
 }
@@ -479,9 +553,6 @@ a {
   }
   .reviews {
     width: 940px;
-    /*delete*/
-    outline: 5px solid rgba(0, 255, 0, 0.7);
-    outline-offset: -5px;
   }
   .review__wrapper {
     width: 100%;
@@ -667,15 +738,20 @@ a {
   align-items: center;
   justify-content: space-between;
   width: 284px;
+  margin: auto;
+  padding: 20px 40px;
 }
 .logo__footer {
   width: 145px;
   height: 40px;
+  margin-bottom: 20px;
 }
 .social-media {
   display: flex;
   width: 172px;
   justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .social-media__button {
   display: flex;
@@ -687,11 +763,18 @@ a {
   border: 3px solid rgba(40, 54, 69, 0.1);
   border-radius: 50%;
 }
+.social-media__button:hover {
+  border-color: #283645;
+}
+.social-media__button:active {
+  opacity: 0.1;
+}
 .developer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 130px;
+  margin-top: 20px;
 }
 .developer__text {
   font-size: 14px;
