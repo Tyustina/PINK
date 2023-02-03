@@ -9,11 +9,23 @@
 }
 
 .price-table__first-line {
+  position: relative;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   background: @cobalt;
   color: @white;
+}
+
+.price-table--hit::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 61px;
+  height: 61px;
+  background-image: url("../img/content/sticker-hit.png");
+  background-repeat: no-repeat;
 }
 
 .price-table__cost {
@@ -44,29 +56,33 @@
 }
 
 @media (min-width: @tablet-width) {
+  .price {
+    padding: 55px 20px 70px 20px;
+  }
+
+  .price-table {
+    width: 100%;
+  }
+
   .price-table__left-column {
-    width: 153px;
+    width: 25%;
     height: 45px;
     border: 2px solid @dirty-white;
     padding-left: 17px;
   }
 
   .price-table__first-line {
-    width: 152px;
+    width: 25%;
     height: 75px;
     border: 2px solid @dirty-white;
     text-align: center;
   }
 
   .price-table__yes-or-no {
-    width: 152px;
+    width: 25%;
     height: 45px;
     border: 2px solid @dirty-white;
     text-align: center;
-  }
-
-  .slider-toggles {
-    display: none;
   }
 }
 
