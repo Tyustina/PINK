@@ -1,37 +1,146 @@
-.photogalerey-title__wrapper {
-  height: 170px;
-}
-
 .photogalerey-title {
   color: @white;
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
   text-align: center;
+  margin: 0;
+  padding: 36px 5% 84px 5%;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 81px;
+    padding-bottom: 143px;
+    font-size: 50px;
+    line-height: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 74px;
+    padding-bottom: 104px;
+  }
 }
 
 .photogalerey-subtitle {
   font-size: 14px;
-  margin-top: 54px;
-  margin-bottom: 60px;
+  margin: 0;
+  padding: 63px 5% 51px 5%;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0 10%;
+    padding-top: 100px;
+    padding-bottom: 85px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 47px;
+  }
 }
 
-.photogalerey__post {
-  background-color: @light-grey;
-  width: 300px;
+.photogalerey-subtitle br {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.photogalerey__panorama {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 36px;
+    top: 0;
+    right: 5%;
+    background-image: url("../img/content/panorama-day.png");
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 55px;
+    }
+  }
+}
+
+.photogalerey__panorama_wrapper {
+  width: 100%;
+  height: 137px;
+  padding: 0;
+  margin: 0;
+  background-color: @light-grey;
+}
+
+.post_wrapper--panorama {
+  background-color: @light-grey;
 }
 
 .photogalerey__post_wrapper {
-  padding: 30px;
-  min-height: 155px;
+  width: 80%;
+  padding: 3% 5% 1% 5%;
+  margin: 0 auto;
+}
+
+.photogalerey__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    width: 660px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+.photogalerey__item {
+  margin-bottom: 20px;
+  background-color: @light-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    margin: 0 auto;
+    margin-right: 5%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 54px;
+  }
+}
+
+.photogalerey__img_wrapper {
+  width: 90%;
+  height: 180px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 400px;
+  }
 }
 
 .post__autor_name {
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 14px;
+  margin: 0;
 }
 
 .post__autor_name span {
@@ -43,11 +152,18 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  margin: 0;
 }
 
 .post__likes_counter {
+  width: 120px;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row-reverse;
+    width: 100%;
+  }
 }
 
 .post__likes_counter--text {
@@ -55,68 +171,4 @@
   line-height: 24px;
   text-transform: uppercase;
   color: @pink;
-}
-
-.new-post_list {
-  display: flex;
-  justify-content: space-between;
-  width: 195px;
-}
-
-.icon-fill_range,
-.icon-contrast_range {
-  display: none;
-}
-
-.new_post__button {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
-  width: 280px;
-  padding-top: 21px;
-  padding-bottom: 21px;
-  border: 3px solid;
-  border-radius: 30px;
-  background-color: transparent;
-}
-
-.button--send {
-  margin-bottom: 12px;
-  border-color: @pink;
-  color: @pink;
-}
-
-.button--cancel {
-  color: @cobalt;
-  border-color: @cobalt;
-  opacity: 0.1;
-}
-
-@media (min-width: @tablet-width) {
-  .photogalerey-title__wrapper {
-    height: 330px;
-  }
-
-  .photogalerey-title {
-    font-size: 50px;
-    line-height: 68px;
-  }
-
-  .photogalerey-subtitle {
-    font-size: 18px;
-    margin-top: 100px;
-    margin-bottom: 85px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .photogalerey-title__wrapper {
-    height: 285px;
-  }
-
-  .photogalerey-subtitle {
-    margin-top: 100px;
-    margin-bottom: 97px;
-  }
 }

@@ -11,6 +11,22 @@
   width: 145px;
   height: 40px;
   margin-bottom: 20px;
+  cursor: pointer;
+
+  &:hover .path__cobalt,
+  &:hover .path__pink {
+    fill: @pink;
+  }
+
+  &:active .path__cobalt {
+    fill: @cobalt;
+    opacity: 0.3;
+  }
+
+  &:active .path__pink {
+    fill: @pink;
+    opacity: 0.3;
+  }
 }
 
 .social-media {
@@ -56,12 +72,25 @@
 .developer--logo {
   width: 27px;
   height: 34px;
+  cursor: pointer;
+
+  &:hover path {
+    fill: @black;
+  }
+
+  &:active path {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
     flex-direction: row;
     padding: 5%;
+  }
+
+  .developer {
+    margin: 0;
   }
 }
 

@@ -41,7 +41,6 @@
   line-height: 30px;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 41px;
 }
 
 .slider-toggles {
@@ -96,7 +95,7 @@
       height: 63px;
       top: 20%;
       left: 48%;
-      background-image: url("../img/content/quotes.svg");
+      background-image: url("../img/content/index/quotes.svg");
       background-repeat: no-repeat;
     }
   }
@@ -130,10 +129,58 @@
     border-width: 0 0 2px 2px;
   }
 
+  .review__previous:hover::before {
+    position: absolute;
+    content: "";
+    border: 2px solid rgba(40, 54, 69, 0.6);
+    top: 15%;
+    left: 40%;
+    rotate: 45deg;
+    width: 29px;
+    height: 29px;
+    border-width: 0 0 2px 2px;
+  }
+
+  .review__previous:active::before {
+    position: absolute;
+    content: "";
+    border: 2px solid rgba(40, 54, 69, 0.1);
+    top: 15%;
+    left: 40%;
+    rotate: 45deg;
+    width: 29px;
+    height: 29px;
+    border-width: 0 0 2px 2px;
+  }
+
   .review__next::before {
     position: absolute;
     content: "";
     border: 2px solid rgba(40, 54, 69, 0.3);
+    top: 15%;
+    left: -2%;
+    rotate: 45deg;
+    width: 29px;
+    height: 29px;
+    border-width: 2px 2px 0 0;
+  }
+
+  .review__next:hover::before {
+    position: absolute;
+    content: "";
+    border: 2px solid rgba(40, 54, 69, 0.6);
+    top: 15%;
+    left: -2%;
+    rotate: 45deg;
+    width: 29px;
+    height: 29px;
+    border-width: 2px 2px 0 0;
+  }
+
+  .review__next:active::before {
+    position: absolute;
+    content: "";
+    border: 2px solid rgba(40, 54, 69, 0.1);
     top: 15%;
     left: -2%;
     rotate: 45deg;
@@ -149,9 +196,6 @@
   .review__text {
     width: 80%;
     margin-bottom: 0;
-    /*delete*/
-    outline: 5px solid rgba(255, 0, 0, 0.7);
-    outline-offset: -5px;
   }
 
   .review__author {

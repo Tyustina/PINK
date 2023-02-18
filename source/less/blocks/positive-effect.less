@@ -13,7 +13,7 @@
   }
 
   .positive__effect_wrapper {
-    width: 50%;
+    width: 45%;
     margin-left: auto;
     padding: 5%;
     /*delete*/
@@ -26,10 +26,10 @@
     position: absolute;
     top: 0;
     left: 5%;
-    width: 100%;
-    height: 100%;
+    width: 298px;
+    height: 345px;
     background-size: contain;
-    background-image: url("../img/content/effect.png");
+    background-image: url("../img/content/index/effect.svg");
     background-repeat: no-repeat;
   }
 
@@ -51,5 +51,11 @@
     line-height: 24px;
     color: @pink;
     text-decoration: underline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .positive__effect::before {
+    left: 10%;
   }
 }

@@ -39,37 +39,7 @@ a {
   background-color: @white;
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 280px;
-
-  @media (min-width: @tablet-width) {
-    max-width: 620px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0;
-    max-width: 940px;
-  }
+.page-main {
+  position: relative;
 }
 
-.slider-toggle {
-  padding: 0;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: @cobalt;
-  opacity: 0.3;
-  cursor: pointer;
-}
-
-.slider-toggle--current {
-  padding: 0;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 3px solid @cobalt;
-  background-color: transparent;
-  cursor: pointer;
-}
